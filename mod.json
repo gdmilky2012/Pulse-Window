@@ -1,0 +1,97 @@
+{
+  "geode": "5.11.1",
+  "gd": {
+    "android": "*",
+    "win": "*",
+    "mac": "*"
+  },
+  "id": "farhan.pulse-window",
+  "name": "Pulse Window",
+  "version": "v1.1.0",
+  "developer": "Farhan",
+  "description": "Frame window trainer: lingkaran durasi input (frame), counter histogram di kanan atas, suara saat input dimulai, dan impor macro (gdr, gdr2, slc, mhr, zbf, xd, txt) untuk dianalisis.",
+  "settings": {
+    "enabled": {
+      "type": "bool",
+      "name": "Aktifkan",
+      "default": true
+    },
+    "frame-rate": {
+      "type": "int",
+      "name": "Acuan frame per detik",
+      "description": "Durasi input dikonversi ke frame pada FPS acuan ini (mis. 60, 240).",
+      "default": 60,
+      "min": 30,
+      "max": 1000
+    },
+    "import-native": {
+      "type": "bool",
+      "name": "Impor: pakai frame asli macro",
+      "description": "Jika mati, durasi hold macro dikonversi ke 'Acuan frame per detik'.",
+      "default": true
+    },
+    "target-frames": {
+      "type": "int",
+      "name": "Batas frame window",
+      "description": "Lingkaran hijau jika durasi <= batas ini, merah jika lebih.",
+      "default": 5,
+      "min": 1,
+      "max": 120
+    },
+    "sound": {
+      "type": "bool",
+      "name": "Suara saat input dimulai",
+      "default": true
+    },
+    "volume": {
+      "type": "float",
+      "name": "Volume suara",
+      "default": 0.8,
+      "min": 0.0,
+      "max": 1.0
+    },
+    "show-histogram": {
+      "type": "bool",
+      "name": "Tampilkan counter (kanan atas)",
+      "default": true
+    },
+    "max-rows": {
+      "type": "int",
+      "name": "Jumlah baris counter",
+      "default": 8,
+      "min": 1,
+      "max": 20
+    },
+    "hist-scale": {
+      "type": "float",
+      "name": "Ukuran counter",
+      "default": 0.4,
+      "min": 0.2,
+      "max": 1.0
+    },
+    "reset-on-death": {
+      "type": "bool",
+      "name": "Reset counter tiap attempt",
+      "default": false
+    },
+    "circle-position": {
+      "type": "string",
+      "name": "Posisi lingkaran",
+      "default": "top-center",
+      "one-of": [
+        "top-center",
+        "center",
+        "bottom-center",
+        "left",
+        "right"
+      ]
+    },
+    "circle-scale": {
+      "type": "float",
+      "name": "Ukuran lingkaran",
+      "default": 1.0,
+      "min": 0.4,
+      "max": 2.5
+    }
+  }
+}
